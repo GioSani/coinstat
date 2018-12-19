@@ -1,0 +1,5 @@
+coinmarketcap==4.2.1
+djangorestframework_jwt==1.11.0
+requests==2.18.4
+Django==1.11.8
+djangorestframework==3.9.0

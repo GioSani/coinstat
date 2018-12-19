@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% load staticfiles %}
+
+<html lang="en">
+
+<head>
+
+    <!-- Login_Registration-->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<link href="{% static 'mainstat/css/style.css'%}" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SB Admin - Start Bootstrap Template</title>
+  <!-- Bootstrap core CSS-->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="{% static 'vendor/datatables/dataTables.bootstrap4.css'%}" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="{% static 'css/sb-admin.css'%}" rel="stylesheet">
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Navbar Dropdown Login and Signup Form with Social Buttons</title>
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css" href="mainstat/css/style.css"></style>
+<script type="text/javascript" src="{% static 'mainstat/js/link.js'%}">
+	// Prevent dropdown menu from closing when click inside the form
+
+
+
+</script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+	<div class="navbar-header d-flex col">
+		<a class="navbar-brand" href="#">Coin<b>stat</b></a>
+		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+			<span class="navbar-toggler-icon"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<ul class="nav navbar-nav">
+			<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+			<li class="nav-item dropdown">
+				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#" class="dropdown-item">Web Design</a></li>
+					<li><a href="#" class="dropdown-item">Web Development</a></li>
+					<li><a href="#" class="dropdown-item">Graphic Design</a></li>
+					<li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+				</ul>
+			</li>
+			<li class="nav-item active"><a href="#" class="nav-link">Dashboard</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+		</ul>
+		<form class="navbar-form form-inline">
+			<div class="input-group search-box">
+				<input type="text" id="search" class="form-control" placeholder="Search here...">
+				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+			</div>
+		</form>
+		<ul class="nav navbar-nav navbar-right ml-auto">
+			<form action="{% url  'accounts:logout'  %}" method="post">
+				{% csrf_token %}
+				<input type="submit" value="Logout"  class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"></input>
+			</form>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+</body>
+</html>
+
+{% block body_block %}
+{% endblock %}
